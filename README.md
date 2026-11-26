@@ -40,14 +40,6 @@ Upstream's home page is "recommended playlists + daily picks + several content b
 2. **Fewer levels** — groups previously expressed via `navigation` became two chip rows at the top of the page; sub pages start with a `← Back` chip.
 3. **Songs first** — a track list sits right below the card block instead of a full screen of covers.
 
-## Who it is for
-
-| Good fit | Not a fit |
-| --- | --- |
-| People who want to open the app and play their likes and daily picks | People who browse charts and the playlist plaza as their home page |
-| People who treat "Liked songs" as the main screen | People who need unlocking greyed tracks, proxy IP switching or downloads (not provided) |
-| YesPlayMusic **3.0.0 or later** | Anyone still on 2.x (the Electron build) |
-
 ## Features
 
 | Area | Details |
