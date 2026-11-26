@@ -9,6 +9,16 @@
 一个给 [YesPlayMusic](https://github.com/qier222/YesPlayMusic) 用的网易云音乐源插件。
 基于 [lymzzyh/ypm-plugin-netease](https://github.com/lymzzyh/ypm-plugin-netease) 改造：把每天都会点的入口收进首页一张大卡，把分散的页面导航换成两排标签，打开应用就能接着听，不用先在一屏推荐卡片里找路。
 
+## 安装
+
+- **方式一（推荐）**：YesPlayMusic → **设置 → 插件 → 安装插件**，粘贴仓库地址，例如 `github.com/<你的用户名>/ypm-plugin-netease-lite`。
+- **方式二**：从仓库右侧的 **Releases** 下载 ZIP，解压后选**从本地文件夹安装…**，选中包含 `plugin.json` 的那一层文件夹。
+- **方式三**：手动放进插件目录后重启应用：
+  - Windows：`%APPDATA%\YesPlayMusic\plugins\`
+  - macOS：`~/Library/Application Support/YesPlayMusic/plugins/`
+
+装好后在 **设置 → 插件** 里能看到「网易云音乐 · 简洁版」，点「重新加载」即可。
+
 **非官方插件**，与网易云音乐官方无关。取流、登录、歌词、喜欢、云盘等核心逻辑沿用上游，本项目只重做页面组织和导航方式。
 
 ## 这个分支想解决什么
@@ -60,16 +70,6 @@
   - 第二排：我喜欢的 · 最近播放 · 我的音乐 · 我创建的 · 我的云盘
 - 进入子页面后第一个标签变成 **← 返回**，当前页高亮，也能横向直接切到其他页面。
 - 翻页（我喜欢的 / 热门歌单 / 我的云盘）挂在标签行上。
-
-## 安装
-
-- **方式一（推荐）**：YesPlayMusic → **设置 → 插件 → 安装插件**，粘贴仓库地址，例如 `github.com/<你的用户名>/ypm-plugin-netease-lite`。
-- **方式二**：从仓库右侧的 **Releases** 下载 ZIP，解压后选**从本地文件夹安装…**，选中包含 `plugin.json` 的那一层文件夹。
-- **方式三**：手动放进插件目录后重启应用：
-  - Windows：`%APPDATA%\YesPlayMusic\plugins\`
-  - macOS：`~/Library/Application Support/YesPlayMusic/plugins/`
-
-装好后在 **设置 → 插件** 里能看到「网易云音乐 · 简洁版」，点「重新加载」即可。
 
 ## 使用
 
