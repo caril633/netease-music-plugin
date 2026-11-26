@@ -11,6 +11,27 @@ A UI-focused fork of [lymzzyh/ypm-plugin-netease](https://github.com/lymzzyh/ypm
 
 **Unofficial plugin**, not affiliated with NetEase. Streaming, sign-in, lyrics, likes and cloud drive logic come from upstream; only page composition and navigation are reworked here.
 
+## Installation
+
+- **Option 1 (recommended)**: YesPlayMusic → **Settings → Plugins → Install plugin**, paste the repository address: `github.com/caril633/netease-music-plugin`.
+- **Option 2**: Download a ZIP from **Releases** on the repository page, extract it, then choose **Install from local folder…** and pick the folder that contains `plugin.json`.
+- **Option 3**: Copy the folder into the plugin directory and restart:
+  - Windows: `%APPDATA%\YesPlayMusic\plugins\`
+  - macOS: `~/Library/Application Support/YesPlayMusic/plugins/`
+
+After installing, "NetEase Cloud Music · Lite" appears under **Settings → Plugins**; hit **Reload**.
+If the sidebar does not change, switch the music source to **NetEase Cloud Music · Lite** from the avatar menu first, then reload.
+
+## Screenshots
+
+Home: one card block plus the liked songs list.
+
+![Home: two large cards, three small rows, then the track list](docs/home.png)
+
+Discover: two chip rows at the top, with the daily picks list below.
+
+![Discover: two chip rows replacing sidebar groups, daily picks inside](docs/discover.png)
+
 ## What this fork is for
 
 Upstream's home page is "recommended playlists + daily picks + several content blocks". Feature-complete, but day-to-day listening only touches a handful of entries while the rest compete for attention. Three changes here:
@@ -48,10 +69,11 @@ Upstream's home page is "recommended playlists + daily picks + several content b
 
 **Home**
 
+- A greeting (changes with the time of day) and your nickname at the top.
 - Card block:
-  - Large cards: **Liked songs** (opens the native playlist page) and **Private roam** (continuous radio)
-  - Small rows: **Daily picks**, **Recently played**, first recommended playlist
-- Below it: 50 liked tracks, then the recommended playlist grid.
+  - Large cards: **Liked songs** (opens the native playlist page, with a Play button and cover) and **Private roam** (continuous radio showing the upcoming track)
+  - Small rows: **Daily picks**, **Recently played**, today's **private radar** entry
+- Below it: 50 liked tracks in two columns, then the recommended playlist grid.
 
 **Discover**
 
@@ -60,16 +82,6 @@ Upstream's home page is "recommended playlists + daily picks + several content b
   - Row 2: Liked · Recently played · My music · My playlists · Cloud drive
 - On sub pages the first chip becomes **← Back**; the current page is highlighted and you can jump sideways.
 - Pagination (liked / hot playlists / cloud drive) lives on the chip row.
-
-## Installation
-
-- **Option 1 (recommended)**: YesPlayMusic → **Settings → Plugins → Install plugin**, paste the repository address, e.g. `github.com/<you>/ypm-plugin-netease-lite`.
-- **Option 2**: Download a ZIP from **Releases** on the repository page, extract it, then choose **Install from local folder…** and pick the folder that contains `plugin.json`.
-- **Option 3**: Copy the folder into the plugin directory and restart:
-  - Windows: `%APPDATA%\YesPlayMusic\plugins\`
-  - macOS: `~/Library/Application Support/YesPlayMusic/plugins/`
-
-After installing, "NetEase Cloud Music · Lite" appears under **Settings → Plugins**; hit **Reload**.
 
 ## Usage
 
@@ -138,6 +150,23 @@ Current status: **29 passed / 3 skipped / 0 failed**. The three skipped cases no
 - `client.js`: NetEase requests, session and QR sign-in
 - `models.js`: API data → plugin models
 - `locales/`: UI strings for nine languages
+- `docs/`: screenshots used in this README
+
+### Repository layout
+
+```
+netease-music-plugin/
+├── plugin.json          manifest (id, navigation, quality setting)
+├── index.js             page composition and plugin exports
+├── client.js            requests, session, QR sign-in
+├── models.js            API data → models
+├── i18n.js              translation helper
+├── locales/             UI strings, nine languages
+├── test/                localisation and page structure tests
+├── docs/                README screenshots
+├── CHANGELOG.md         changelog
+└── LICENSE              MIT
+```
 
 ## License and credits
 
